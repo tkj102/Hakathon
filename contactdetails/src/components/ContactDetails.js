@@ -46,38 +46,77 @@ class  contactDetails extends React.Component{
                 <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.name1} />
               </td>
               <td>
-                <input type = "text" placeholder={this.contactDetails.email1} />
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.email1} />
               </td>
               <td>
-                <input type = "text" placeholder={this.contactDetails.phonenumber1} />
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.phonenumber1} />
               </td>
               <td>
-                <input type = "text" placeholder={this.contactDetails.purposeofcontact1} />
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.purposeofcontact1} />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.name2} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.email2} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.phonenumber2} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.purposeofcontact2} />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.name3} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.email3} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.phonenumber3} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.purposeofcontact3} />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.name4} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.email4} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.phonenumber4} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.purposeofcontact4} />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.name5} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.email5} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.phonenumber5} />
+              </td>
+              <td>
+              <input readOnly ={this.state.readOnlyFlag} type = "text" placeholder={this.contactDetails.purposeofcontact5} />
               </td>
             </tr>
 
-            <tr>
-              <td data-label="Name">{this.contactDetails.name2}</td>
-              <td data-label="Age">{this.contactDetails.email2}</td>
-              <td data-label="Job">{this.contactDetails.phonenumber2}</td>
-              <td data-label="Job">{this.contactDetails.purposeofcontact2}</td>
-            </tr>
-            <tr>
-              <td data-label="Name">{this.contactDetails.name3}</td>
-              <td data-label="Age">{this.contactDetails.email3}</td>
-              <td data-label="Job">{this.contactDetails.phonenumber3}</td>
-              <td data-label="Job">{this.contactDetails.purposeofcontact3}</td>
-            </tr>
-            <tr>
-              <td data-label="Name">{this.contactDetails.name4}</td>
-              <td data-label="Age">{this.contactDetails.email4}</td>
-              <td data-label="Job">{this.contactDetails.phonenumber4}</td>
-              <td data-label="Job">{this.contactDetails.purposeofcontact4}</td>
-            </tr>
+
           </tbody>
         </table>
 
-            <button className="ui button" style={{background:'red',color:'white'}} 
+            <button className ="ui inverted button " style={{background:'red',color:'white'}} 
               onClick={()=> 
                 { 
                   this.setState({readOnlyFlag: false});
@@ -89,7 +128,7 @@ class  contactDetails extends React.Component{
             >
               Edit
             </button>
-            <button className="ui button" 
+            <button className="ui inverted button active" 
               style={{background:'green',color:'white',visibility:this.state.saveVisibility}} 
               onClick={()=> 
                 { 
