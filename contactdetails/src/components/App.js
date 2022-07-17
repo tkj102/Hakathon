@@ -37,7 +37,9 @@ function App() {
     console.log(customerNo);
     setCustomerNo(customerNo);
   }
-
+  // const getAddressDetails = ()=>{
+  //     let 
+  // }
   useEffect(()=>{
     if (customerNo)
       axios.get('http://locahost:3006/${ctcd}')
