@@ -12,14 +12,11 @@ class SearchCriteria extends React.Component{
     }
 
     searchCustomerDetails = (e)=>{
-        console.log("hhhhehhheheh")
         if (this.state.serial==="" || this.state.branch ==="" || this.state.adid ==="")
         alert("Important Information Cannot Be Blank")
-        console.log(this.state)
         this.props.searchAddressHandler(this.state)
     }
     render(){
-        console.log("Rendering")
     return(
         
         <div className="Search">
@@ -30,22 +27,27 @@ class SearchCriteria extends React.Component{
                 <input type ="text"  style ={{ width: '50px',height: '10px' }} name="countrycode" placeholder="QA"
                 onChange={(e)=>{this.setState({ctd:e.target.value})}}
                 value = {this.state.ctcd}
+                maxLength={2}
                 ></input>
                 <input type ="text"  style ={{ width: '70px',height: '10px' }} name="groupmember" placeholder="BBME"
+                maxLength={4}
                 value = {this.state.gmab}
                 onChange={(e)=>{this.setState({gmab:e.target.value})}}
                 ></input>
                 <input type ="text"  style ={{ width: '60px',height: '10px' }} name="branch" placeholder="001"
+                maxLength={3}
                 value = {this.state.branch}
                 onChange={(e)=>{this.setState({branch:e.target.value})}}
                 ></input>
                 <input type ="text"  style ={{ width: '90px',height: '10px' }} name="serial" placeholder="00001"
+                maxLength={6}
                 value = {this.state.serial}
                 onChange={(e)=>{this.setState({serial:e.target.value})}}></input>
             </div>
             <div className="field">
                 <label> Address ID  </label>
                 <input type ="text" style ={{ width: '70px',height: '10px' }} name="addressid" placeholder="P1"
+                maxLength={2}
                 value = {this.state.adid}
                 onChange={(e)=>{this.setState({adid:e.target.value})}}
                 ></input>

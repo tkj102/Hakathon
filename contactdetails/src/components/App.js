@@ -2,7 +2,8 @@ import './App.css';
 import Header from './Header';
 import SearchCriteria from './SearchCriteria';
 import ContactDetails from './ContactDetails'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const contactDetailsList={
   name1:'Tarun',
@@ -30,9 +31,17 @@ const contactDetailsList={
 
 
 function App() {
+
+  const [customerNo]= useState([]);
   const searchAddressHandler =(customerNo)=>{
     console.log(customerNo);
   }
+
+  useEffect(()=>{
+    console.log("use effect triggered")
+    axios.get('http://locahost:3006/${ctcd}')
+  },[])
+
   return (
     <div className="App">
       <Header />

@@ -18,7 +18,6 @@ class  contactDetails extends React.Component{
   
   constructor(props) {
     super(props)
-    console.log("hello")
     this.state = {
       readOnlyFlag: true,
       contactDetails : {},
@@ -28,8 +27,6 @@ class  contactDetails extends React.Component{
 
   render(){
     this.contactDetails = this.props.contactDetailsList
-    console.log("this.state.readOnlyFlag",this.state.readOnlyFlag)
-    console.log("this.contactDetails",this.contactDetails)
     return(
         <div className="Contact Details">
         <h2> Contact Details</h2>
@@ -121,8 +118,7 @@ class  contactDetails extends React.Component{
                 { 
                   this.setState({readOnlyFlag: false});
                   this.setState({saveVisibility: 'visible'});
-                  
-                  console.log("this.readOnlyFlag",this.state.readOnlyFlag)
+        
                 } 
               }  
             >
