@@ -32,15 +32,16 @@ const contactDetailsList={
 
 function App() {
 
-  const [customerNo]= useState([]);
+  const [customerNo, setCustomerNo] = useState(null);
   const searchAddressHandler =(customerNo)=>{
     console.log(customerNo);
+    setCustomerNo(customerNo);
   }
 
   useEffect(()=>{
-    console.log("use effect triggered")
-    axios.get('http://locahost:3006/${ctcd}')
-  },[])
+    if (customerNo)
+      axios.get('http://locahost:3006/${ctcd}')
+  },[customerNo])
 
   return (
     <div className="App">

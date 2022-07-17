@@ -30,7 +30,7 @@ class  contactDetails extends React.Component{
     return(
         <div className="Contact Details">
         <h2> Contact Details</h2>
-            <table class="ui celled table">
+            <table className="ui celled table">
               <thead>
                 <tr><th>Name</th>
                 <th>Email Address</th>
